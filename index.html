@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#F1ECE1">
+  <meta name="description" content="玄一 · 太極｜道系青年。以黑白為骨、朱砂為印，把道教文化翻譯成當代年輕人的生活指南：反內耗、鬆弛感、人間清醒，和一顆會呼吸的太極。">
+  <title>玄一 · 太極｜道系青年，不內耗的當代修行</title>
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至正文</a>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="page-progress" aria-hidden="true"><span id="pageProgress"></span></div>
+
+  <svg class="svg-sprite" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="ink-edge" x="-12%" y="-12%" width="124%" height="124%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.012 0.02" numOctaves="2" seed="7" result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+      <symbol id="taiji-mark" viewBox="0 0 600 600">
+        <g filter="url(#ink-edge)">
+          <circle cx="300" cy="300" r="292" fill="var(--taiji-paper, #F1ECE1)"/>
+          <path d="M300 8a292 292 0 0 1 0 584 146 146 0 0 0 0-292 146 146 0 0 1 0-292Z" fill="var(--taiji-ink, #15140F)"/>
+          <circle cx="300" cy="154" r="34" fill="var(--taiji-paper, #F1ECE1)"/>
+          <circle cx="300" cy="446" r="34" fill="var(--taiji-ink, #15140F)"/>
+        </g>
+        <circle cx="300" cy="300" r="291" fill="none" stroke="var(--taiji-ink, #15140F)" stroke-opacity=".16" stroke-width="1.4"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="#top" aria-label="玄一 · 返回卷首">
+      <span class="brand-seal" aria-hidden="true">玄</span>
+      <span class="brand-name">玄一<span class="brand-latin">DAOIST YOUTH</span></span>
+    </a>
+
+    <nav class="main-nav" aria-label="主要導覽">
+      <a class="nav-youth" href="#dao"><span>道系</span><small>DAOIST YOUTH</small></a>
+      <a href="#yinyang"><span>陰陽</span><small>YIN YANG</small></a>
+      <a href="#sixiang"><span>四象</span><small>FOUR IMAGES</small></a>
+      <a href="#bagua"><span>八卦</span><small>BAGUA</small></a>
+      <a href="#guandao"><span>觀道</span><small>STILLNESS</small></a>
+    </nav>
+
+    <div class="header-meta">
+      <span class="header-live"><i aria-hidden="true"></i>在線修心</span>
+      <span class="header-volume">道系青年手冊</span>
+      <span class="header-year">VOL.01</span>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="menuPanel" aria-label="開啟卷目">
+      <span class="menu-toggle__line"></span>
+      <span class="menu-toggle__line"></span>
+      <span class="sr-only">開啟卷目</span>
+    </button>
+  </header>
+
+  <div class="menu-panel" id="menuPanel" role="dialog" aria-modal="true" aria-label="卷目導覽" aria-hidden="true">
+    <div class="menu-panel__wash" aria-hidden="true">易</div>
+    <div class="menu-panel__inner">
+      <div class="menu-panel__head">
+        <span>卷目 · CONTENTS</span>
+        <span>道系青年 / 00—04</span>
+      </div>
+      <nav class="menu-nav" aria-label="行動版導覽">
+        <a href="#dao"><span class="menu-nav__no">序</span><span class="menu-nav__cn">道系</span><span class="menu-nav__en">DAOIST YOUTH</span></a>
+        <a href="#yinyang"><span class="menu-nav__no">壹</span><span class="menu-nav__cn">陰陽</span><span class="menu-nav__en">THE TWO FORCES</span></a>
+        <a href="#sixiang"><span class="menu-nav__no">貳</span><span class="menu-nav__cn">四象</span><span class="menu-nav__en">THE FOUR IMAGES</span></a>
+        <a href="#bagua"><span class="menu-nav__no">參</span><span class="menu-nav__cn">八卦</span><span class="menu-nav__en">THE EIGHT TRIGRAMS</span></a>
+        <a href="#guandao"><span class="menu-nav__no">肆</span><span class="menu-nav__cn">觀道</span><span class="menu-nav__en">STILLNESS</span></a>
+      </nav>
+      <div class="menu-panel__foot">
+        <span>道法自然 · 允許一切發生</span>
+        <span>玄一 · DAOIST YOUTH</span>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+    <!-- 00 / HERO -->
+    <section class="hero" id="top" aria-labelledby="heroTitle">
+      <div class="hero-guides" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+
+      <svg class="hero-landscape" viewBox="0 0 1600 460" preserveAspectRatio="none" aria-hidden="true">
+        <path class="landscape-fill" d="M0 418c138-23 188-98 322-91 132 6 178 69 322 48 154-23 226-126 380-115 160 11 220 100 376 87 71-6 132-29 200-56v169H0Z"/>
+        <path class="landscape-line" d="M-40 351c143-20 196-112 351-92 152 19 194 110 346 82 158-30 231-149 392-121 151 27 216 136 377 111 77-12 147-50 222-79"/>
+        <path class="landscape-line landscape-line--soft" d="M-30 389c163-5 216-78 372-59 144 18 225 98 376 69 144-27 234-113 384-92 144 21 227 107 382 83 59-10 115-28 169-49"/>
+        <path class="landscape-line landscape-line--faint" d="M-20 310c111-78 204-88 331-48 101 32 175 27 279-15 136-54 228-55 358 3 117 52 197 49 319-4 96-42 195-56 360 7"/>
+      </svg>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="hero-kicker hero-eyebrow">
+            <span class="live-pill"><span class="live-dot" aria-hidden="true"></span>道系青年 <em>ONLINE</em></span>
+            <span class="hero-kicker__line" aria-hidden="true"></span>
+            <span class="hero-kicker__text">道教文化 × 當代青年</span>
+          </div>
+
+          <h1 class="hero-title" id="heroTitle">
+            <span class="sr-only">太極</span>
+            <span class="hero-title__chars" aria-hidden="true">
+              <span class="char-mask"><span class="char">太</span></span>
+              <span class="char-mask char-mask--second"><span class="char char--outline">極</span></span>
+            </span>
+            <span class="hero-title__latin" aria-hidden="true">THE<br>SUPREME<br>ULTIMATE</span>
+          </h1>
+
+          <div class="hero-statement">
+            <p class="hero-lede">無極而太極。<br><em>動而生陽，靜而生陰。</em></p>
+            <p class="hero-note"><span class="hero-note__tag">道系翻譯</span>允許一切發生，<br>也允許自己慢一點。</p>
+          </div>
+
+          <div class="hero-actions">
+            <a class="button button--ink" href="#dao">
+              <span>展卷 · 入靜</span>
+              <span class="button-arrow" aria-hidden="true">↓</span>
+            </a>
+            <a class="text-link" href="#oracle"><span>抽今日玄籤</span><span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+
+        <div class="hero-visual" id="heroVisual">
+          <div class="hero-halo" aria-hidden="true"></div>
+          <div class="hero-orbit" aria-hidden="true">
+            <span class="orbit-ring orbit-ring--outer"></span>
+            <span class="orbit-ring orbit-ring--dashed"></span>
+            <span class="orbit-ring orbit-ring--inner"></span>
+            <span class="orbit-tick orbit-tick--1"></span>
+            <span class="orbit-tick orbit-tick--2"></span>
+            <span class="orbit-tick orbit-tick--3"></span>
+            <span class="orbit-tick orbit-tick--4"></span>
+            <span class="orbit-label orbit-label--top">天</span>
+            <span class="orbit-label orbit-label--right">地</span>
+            <span class="orbit-label orbit-label--bottom">人</span>
+            <span class="orbit-label orbit-label--left">道</span>
+            <span class="orbit-planet"></span>
+          </div>
+
+          <figure class="hero-taiji">
+            <div class="taiji-disc" id="heroTaiji">
+              <svg class="taiji-svg" viewBox="0 0 600 600" role="img" aria-label="旋轉的黑白太極圖">
+                <use href="#taiji-mark"></use>
+              </svg>
+            </div>
+            <figcaption>太極圖 · THE TAIJI</figcaption>
+          </figure>
+
+          <span class="hero-seal" aria-hidden="true">道法<br>自然</span>
+          <span class="hero-sticker" aria-hidden="true">
+            <span class="hero-sticker__cn">拒絕內耗</span>
+            <span class="hero-sticker__en">NO OVERTHINKING</span>
+          </span>
+          <span class="hero-figure-no" aria-hidden="true">〇一</span>
+        </div>
+      </div>
+
+      <p class="hero-side-note" aria-hidden="true">不內耗 · 不硬撐 · 不證明 · 允許一切發生</p>
+
+      <div class="hero-foot">
+        <p class="hero-source">周敦頤《太極圖說》<span>北宋 · 公元十一世紀</span></p>
+        <a class="scroll-cue" href="#dao">
+          <span class="scroll-cue__line" aria-hidden="true"></span>
+          <span>向下展卷</span>
+          <small>SCROLL</small>
+        </a>
+        <p class="hero-index"><span>序</span> / 05</p>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <div class="marquee__group">
+          <span>道系青年</span><em>DAOIST YOUTH</em><i></i>
+          <span>拒絕內耗</span><em>NO OVERTHINKING</em><i></i>
+          <span>允許一切發生</span><em>LET IT BE</em><i></i>
+          <span>順其自然</span><em>GO WITH THE FLOW</em><i></i>
+          <span>人間清醒</span><em>STAY CLEAR</em><i></i>
+          <span>及時止損</span><em>KNOW WHEN TO STOP</em><i></i>
+          <span>道法自然</span><em>THE WAY IS NATURAL</em><i></i>
+        </div>
+        <div class="marquee__group">
+          <span>道系青年</span><em>DAOIST YOUTH</em><i></i>
+          <span>拒絕內耗</span><em>NO OVERTHINKING</em><i></i>
+          <span>允許一切發生</span><em>LET IT BE</em><i></i>
+          <span>順其自然</span><em>GO WITH THE FLOW</em><i></i>
+          <span>人間清醒</span><em>STAY CLEAR</em><i></i>
+          <span>及時止損</span><em>KNOW WHEN TO STOP</em><i></i>
+          <span>道法自然</span><em>THE WAY IS NATURAL</em><i></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- 00 / DAOIST YOUTH -->
+    <section class="section section--dao" id="dao" aria-labelledby="daoTitle">
+      <div class="dao-gridlines" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+
+      <div class="shell">
+        <header class="dao-heading reveal">
+          <div class="dao-meta">
+            <span class="live-pill"><span class="live-dot" aria-hidden="true"></span>DAOIST YOUTH <em>ONLINE</em></span>
+            <span class="mono-label">00 / 道系青年</span>
+            <span class="mono-label">道教文化 × 當代生活</span>
+          </div>
+
+          <div class="dao-heading__main">
+            <h2 class="dao-title" id="daoTitle">
+              <span>道系</span>
+              <span class="dao-title__outline">青年<span class="dao-title__dot" aria-hidden="true">.</span></span>
+            </h2>
+
+            <div class="dao-heading__copy">
+              <p class="dao-lead">把老子的鬆弛，<br>翻譯成今天的生存指南。</p>
+              <p class="dao-text">不是躺平，也不是逃離。是知道什麼值得用力，什麼可以放過。</p>
+              <ul class="dao-tags" aria-label="道系青年關鍵詞">
+                <li><span>#</span>鬆弛感</li>
+                <li><span>#</span>反內耗</li>
+                <li><span>#</span>人間清醒</li>
+                <li><span>#</span>及時止損</li>
+                <li><span>#</span>允許一切發生</li>
+              </ul>
+            </div>
+          </div>
+        </header>
+
+        <div class="dao-bento">
+          <article class="dao-feature reveal" data-delay="80">
+            <div class="dao-feature__meta">
+              <span>00 / MANIFESTO</span>
+              <span>道教文化 × 2026</span>
+            </div>
+            <div class="dao-feature__main">
+              <p class="dao-feature__kicker">THE ART OF NOT TRYING TOO HARD</p>
+              <h3>不內耗，<br><span>是當代修行。</span></h3>
+              <p>無為不是什麼都不做，是不再和自己較勁。<br>把力氣留給真正重要的事。</p>
+            </div>
+            <div class="dao-feature__foot">
+              <p class="dao-feature__quote">「為學日益，為道日損。」</p>
+              <span class="dao-seal" aria-hidden="true">少即是<br>多</span>
+            </div>
+            <span class="dao-feature__ghost" aria-hidden="true">無</span>
+          </article>
+
+          <aside class="oracle-card reveal" id="oracle" data-delay="140" aria-labelledby="oracleTitle">
+            <header class="oracle-top">
+              <span class="live-pill"><span class="live-dot" aria-hidden="true"></span>DAILY ORACLE</span>
+              <span class="oracle-date" id="oracleDate">2026.10.20 · TUE</span>
+            </header>
+
+            <div class="oracle-heading">
+              <div>
+                <p class="mono-label">玄門日籤 / DAO ORACLE</p>
+                <h3 id="oracleTitle">今日，怎麼過？</h3>
+              </div>
+              <span class="oracle-stamp" aria-hidden="true">籤</span>
+            </div>
+
+            <div class="oracle-result" id="oracleResult" aria-live="polite" aria-atomic="true">
+              <div class="oracle-fortune oracle-fortune--good">
+                <span class="mono-label">宜 / DO</span>
+                <p id="oracleDo">早睡，散步，把電量留給自己。</p>
+              </div>
+              <div class="oracle-fortune">
+                <span class="mono-label">忌 / DON'T</span>
+                <p id="oracleDont">反覆回味別人的一句話。</p>
+              </div>
+              <p class="oracle-quote" id="oracleQuote">「致虛極，守靜篤。」</p>
+            </div>
+
+            <div class="oracle-foot">
+              <button class="oracle-button" id="oracleButton" type="button" aria-controls="oracleResult">搖一支新籤 <span aria-hidden="true">↻</span></button>
+              <p class="oracle-no"><span>NO.</span><span id="oracleNo">08</span><span>僅供自省</span></p>
+            </div>
+            <div class="oracle-barcode" aria-hidden="true"></div>
+            <span class="oracle-ghost" aria-hidden="true">問</span>
+          </aside>
+
+          <p class="dao-swipe" aria-hidden="true"><span>左右滑動 · SWIPE</span><span>→</span></p>
+
+          <div class="dao-row">
+            <article class="dao-card reveal" data-delay="180">
+              <div class="dao-card__head"><span>01 / RELAX</span><span class="dao-card__dot" aria-hidden="true"></span></div>
+              <span class="dao-card__ghost" aria-hidden="true">鬆</span>
+              <div class="dao-card__body">
+                <h3>鬆弛感</h3>
+                <p class="dao-card__quote">道法自然</p>
+                <p class="dao-card__copy">不是擺爛，是停止和世界硬碰硬。</p>
+              </div>
+              <div class="dao-card__foot"><span>#允許一切發生</span><span class="dao-card__dash" aria-hidden="true"></span></div>
+            </article>
+
+            <article class="dao-card reveal" data-delay="240">
+              <div class="dao-card__head"><span>02 / STOP OVERTHINKING</span><span class="dao-card__dot" aria-hidden="true"></span></div>
+              <span class="dao-card__ghost" aria-hidden="true">定</span>
+              <div class="dao-card__body">
+                <h3>反內耗</h3>
+                <p class="dao-card__quote">少私寡欲</p>
+                <p class="dao-card__copy">腦內小劇場，今日暫停營業。</p>
+              </div>
+              <div class="dao-card__foot"><span>#把力氣還給自己</span><span class="dao-card__dash" aria-hidden="true"></span></div>
+            </article>
+
+            <article class="dao-card reveal" data-delay="300">
+              <div class="dao-card__head"><span>03 / STAY CLEAR</span><span class="dao-card__dot" aria-hidden="true"></span></div>
+              <span class="dao-card__ghost" aria-hidden="true">明</span>
+              <div class="dao-card__body">
+                <h3>人間清醒</h3>
+                <p class="dao-card__quote">知人者智，自知者明。</p>
+                <p class="dao-card__copy">看穿別人之前，先別騙自己。</p>
+              </div>
+              <div class="dao-card__foot"><span>#邊界感在線</span><span class="dao-card__dash" aria-hidden="true"></span></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="dao-manifesto reveal">
+          <span class="mono-label">DAOIST YOUTH MANIFESTO / 2026</span>
+          <p>不強求，不硬撐，不證明。<br><span>把生活過成自己的節奏。</span></p>
+          <span class="dao-manifesto__seal" aria-hidden="true">自然</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 / YIN YANG -->
+    <section class="section section--yinyang" id="yinyang" aria-labelledby="yinyangTitle">
+      <div class="shell">
+        <header class="chapter-heading reveal">
+          <div class="chapter-no"><span>壹</span><small>CHAPTER<br>01</small></div>
+          <div class="chapter-heading__main">
+            <p class="eyebrow">THE TWO FORCES · 兩儀</p>
+            <h2 id="yinyangTitle"><span class="h2-main">一陰一陽</span><span class="h2-sub">之謂道</span></h2>
+          </div>
+          <p class="chapter-heading__body">天地之道，不過一動一靜。陽以生之，陰以成之；二者相反而相生，如晝夜之更迭，如潮汐之往復。</p>
+        </header>
+
+        <div class="duality reveal" data-delay="80">
+          <article class="duality-panel duality-panel--yin" aria-label="陰，靜、柔、藏">
+            <div class="panel-head">
+              <span class="panel-mark">YIN · 陰</span>
+              <span class="panel-order">○ 一</span>
+            </div>
+            <span class="panel-char" aria-hidden="true">陰</span>
+            <div class="panel-body">
+              <p class="panel-motto">靜極復動，<br>是為生生。</p>
+              <ul class="panel-tags" aria-label="陰的特質">
+                <li>靜</li><li>柔</li><li>藏</li><li>夜</li><li>月</li><li>坤</li>
+              </ul>
+            </div>
+            <span class="panel-latin" aria-hidden="true">THE RECEPTIVE</span>
+          </article>
+
+          <div class="duality-axis" aria-hidden="true">
+            <span class="axis-line"></span>
+            <span class="axis-mark"><svg class="taiji-svg" viewBox="0 0 600 600"><use href="#taiji-mark"></use></svg></span>
+            <span class="axis-caption">互為其根</span>
+            <span class="axis-line"></span>
+          </div>
+
+          <article class="duality-panel duality-panel--yang" aria-label="陽，動、剛、顯">
+            <div class="panel-head">
+              <span class="panel-mark">YANG · 陽</span>
+              <span class="panel-order">○ 二</span>
+            </div>
+            <span class="panel-char" aria-hidden="true">陽</span>
+            <div class="panel-body">
+              <p class="panel-motto">動極而靜，<br>復歸於根。</p>
+              <ul class="panel-tags" aria-label="陽的特質">
+                <li>動</li><li>剛</li><li>顯</li><li>晝</li><li>日</li><li>乾</li>
+              </ul>
+            </div>
+            <span class="panel-latin" aria-hidden="true">THE CREATIVE</span>
+          </article>
+        </div>
+
+        <div class="quote-row reveal" data-delay="120">
+          <span class="quote-glyph" aria-hidden="true">“</span>
+          <blockquote>
+            無極而太極。太極動而生陽，動極而靜，靜而生陰，靜極復動。一動一靜，互為其根。
+          </blockquote>
+          <cite>周敦頤 · 太極圖說</cite>
+        </div>
+
+        <div class="modern-note reveal" data-delay="160">
+          <span class="modern-note__tag"><span class="live-dot" aria-hidden="true"></span>道系翻譯 / MODERN NOTE</span>
+          <p>不必一直堅強，偶爾後退，也是在往前。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 / FOUR IMAGES -->
+    <section class="section section--sixiang" id="sixiang" aria-labelledby="sixiangTitle">
+      <div class="shell shell--wide">
+        <header class="chapter-heading chapter-heading--center reveal">
+          <p class="eyebrow">CHAPTER 02 · THE FOUR IMAGES</p>
+          <h2 id="sixiangTitle"><span class="h2-main">兩儀生</span><span class="h2-sub">四象</span></h2>
+          <p class="chapter-heading__body">陽中有陰，陰中有陽。太少之別，成春夏秋冬之序，也成生、長、收、藏的四種呼吸。</p>
+        </header>
+
+        <div class="four-grid">
+          <article class="image-card reveal" data-delay="0">
+            <div class="card-head"><span>LESSER YANG</span><span>〇一</span></div>
+            <div class="digram" aria-hidden="true"><span class="yao yao--solid"></span><span class="yao yao--broken"></span></div>
+            <span class="card-season" aria-hidden="true">春</span>
+            <div class="card-main">
+              <div class="card-name"><h3>少陽</h3><span>SHAO YANG</span></div>
+              <p class="card-nature">木 · 東 · 生發</p>
+              <p class="card-poem">一陽初動，<br>萬物始生。</p>
+            </div>
+            <div class="card-foot"><span>CHUN</span><span>春 · 生</span></div>
+          </article>
+
+          <article class="image-card reveal" data-delay="70">
+            <div class="card-head"><span>GREATER YANG</span><span>〇二</span></div>
+            <div class="digram" aria-hidden="true"><span class="yao yao--solid"></span><span class="yao yao--solid"></span></div>
+            <span class="card-season" aria-hidden="true">夏</span>
+            <div class="card-main">
+              <div class="card-name"><h3>太陽</h3><span>TAI YANG</span></div>
+              <p class="card-nature">火 · 南 · 盛大</p>
+              <p class="card-poem">陽極而明，<br>萬物相見。</p>
+            </div>
+            <div class="card-foot"><span>XIA</span><span>夏 · 長</span></div>
+          </article>
+
+          <article class="image-card reveal" data-delay="140">
+            <div class="card-head"><span>LESSER YIN</span><span>〇三</span></div>
+            <div class="digram" aria-hidden="true"><span class="yao yao--broken"></span><span class="yao yao--solid"></span></div>
+            <span class="card-season" aria-hidden="true">秋</span>
+            <div class="card-main">
+              <div class="card-name"><h3>少陰</h3><span>SHAO YIN</span></div>
+              <p class="card-nature">金 · 西 · 收斂</p>
+              <p class="card-poem">陰始而肅，<br>萬物歸藏。</p>
+            </div>
+            <div class="card-foot"><span>QIU</span><span>秋 · 收</span></div>
+          </article>
+
+          <article class="image-card reveal" data-delay="210">
+            <div class="card-head"><span>GREATER YIN</span><span>〇四</span></div>
+            <div class="digram" aria-hidden="true"><span class="yao yao--broken"></span><span class="yao yao--broken"></span></div>
+            <span class="card-season" aria-hidden="true">冬</span>
+            <div class="card-main">
+              <div class="card-name"><h3>太陰</h3><span>TAI YIN</span></div>
+              <p class="card-nature">水 · 北 · 歸藏</p>
+              <p class="card-poem">陰極而靜，<br>一陽來復。</p>
+            </div>
+            <div class="card-foot"><span>DONG</span><span>冬 · 藏</span></div>
+          </article>
+        </div>
+
+        <p class="section-caption reveal">四象者，陰陽之老少也。<span>THE FOUR PHASES OF CHANGE</span></p>
+
+        <div class="modern-note reveal" data-delay="80">
+          <span class="modern-note__tag"><span class="live-dot" aria-hidden="true"></span>道系翻譯 / MODERN NOTE</span>
+          <p>每個人都有自己的季節，別急著在冬天開花。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 / BAGUA -->
+    <section class="section section--bagua" id="bagua" aria-labelledby="baguaTitle">
+      <div class="bagua-glow" aria-hidden="true"></div>
+      <div class="shell bagua-inner">
+        <div class="bagua-copy reveal">
+          <p class="eyebrow eyebrow--light">CHAPTER 03 · THE EIGHT TRIGRAMS</p>
+          <h2 class="brush-heading" id="baguaTitle">八卦</h2>
+          <p class="bagua-intro">易有太極，是生兩儀；兩儀生四象，四象生八卦。八種自然的呼吸，往復成天地間的萬象。</p>
+
+          <div class="bagua-detail" id="baguaDetail" aria-live="polite" aria-atomic="true">
+            <div class="bagua-detail__head">
+              <span id="baguaIndex">01</span>
+              <span id="baguaEnglish">QIAN · THE CREATIVE</span>
+            </div>
+            <div class="bagua-detail__main">
+              <div class="bagua-detail__name">
+                <span id="baguaName">乾</span>
+                <small id="baguaPinyin">QIAN</small>
+              </div>
+              <div class="detail-digram" id="baguaLines" aria-hidden="true">
+                <span class="yao yao--solid"></span><span class="yao yao--solid"></span><span class="yao yao--solid"></span>
+              </div>
+            </div>
+            <p class="bagua-detail__nature" id="baguaNature">天 · 剛健</p>
+            <p class="bagua-detail__quote" id="baguaQuote">天行健，君子以自強不息。</p>
+          </div>
+
+          <p class="bagua-hint"><span aria-hidden="true">◌</span> 輕觸卦象，觀其象意</p>
+        </div>
+
+        <div class="bagua-stage-wrap reveal" data-delay="100">
+          <div class="bagua-stage" id="baguaStage">
+            <div class="stage-glow" aria-hidden="true"></div>
+            <svg class="stage-ring" viewBox="0 0 640 640" aria-hidden="true">
+              <circle cx="320" cy="320" r="312" />
+              <circle cx="320" cy="320" r="270" />
+              <circle cx="320" cy="320" r="225" />
+            </svg>
+            <svg class="stage-ring-text" viewBox="0 0 640 640" aria-hidden="true">
+              <defs>
+                <path id="ringPath" d="M320,320 m-298,0 a298,298 0 1,1 596,0 a298,298 0 1,1 -596,0" />
+              </defs>
+              <text>
+                <textPath href="#ringPath" startOffset="0">太極生兩儀 · 兩儀生四象 · 四象生八卦 · 八卦定吉凶 · 吉凶生大業 ·</textPath>
+              </text>
+            </svg>
+            <div class="stage-cross" aria-hidden="true"><span></span><span></span></div>
+            <div class="bagua-center" aria-hidden="true">
+              <span class="bagua-center__ring"></span>
+              <svg class="taiji-svg" viewBox="0 0 600 600"><use href="#taiji-mark"></use></svg>
+              <span class="bagua-center__label">太極</span>
+            </div>
+            <div class="bagua-nodes" id="baguaNodes" role="group" aria-label="八卦卦象"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="shell">
+        <div class="modern-note modern-note--light reveal">
+          <span class="modern-note__tag"><span class="live-dot" aria-hidden="true"></span>道系翻譯 / MODERN NOTE</span>
+          <p>人生沒有標準答案，只有當下的選擇。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 / STILLNESS -->
+    <section class="section section--guandao" id="guandao" aria-labelledby="guandaoTitle">
+      <span class="guandao-watermark" aria-hidden="true">靜</span>
+      <div class="shell guandao-grid">
+        <div class="guandao-copy reveal">
+          <p class="eyebrow">CHAPTER 04 · STILLNESS</p>
+          <h2 class="brush-heading brush-heading--ink" id="guandaoTitle">致虛極<br><span>守靜篤</span></h2>
+          <p class="guandao-lede">讓呼吸慢下來。<br>聽風穿過紙隙，看念頭如墨，落入清水，慢慢散開。</p>
+          <blockquote class="guandao-quote">
+            <p>萬物並作，吾以觀復。</p>
+            <cite>老子 · 道德經第十六章</cite>
+          </blockquote>
+          <p class="guandao-note"><span aria-hidden="true">◌</span> 此頁無聲，請以心聽</p>
+        </div>
+
+        <div class="breath-area reveal" data-delay="100">
+          <div class="breath-rings" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <button class="breath-orb" id="breathOrb" type="button" aria-pressed="false" aria-label="開始調息">
+            <span class="breath-orb__halo" aria-hidden="true"></span>
+            <span class="breath-orb__core">
+              <span class="breath-phase" id="breathPhase">息</span>
+              <span class="breath-seconds" id="breathSeconds" aria-hidden="true"></span>
+            </span>
+          </button>
+          <p class="breath-caption" id="breathCaption" aria-live="polite">輕觸圓心 · 與天地同息</p>
+          <p class="breath-pattern"><span>吸 · 四</span><i></i><span>守 · 七</span><i></i><span>呼 · 八</span></p>
+        </div>
+      </div>
+
+      <div class="shell">
+        <div class="modern-note reveal">
+          <span class="modern-note__tag"><span class="live-dot" aria-hidden="true"></span>道系翻譯 / MODERN NOTE</span>
+          <p>先把自己照顧好，再去拯救世界。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top reveal">
+        <span class="footer-kicker">卷終 · END OF SCROLL</span>
+        <a class="footer-return" href="#top"><span>復歸於無極</span><span class="footer-return__arrow" aria-hidden="true">↑</span></a>
+      </div>
+
+      <div class="footer-main">
+        <div class="footer-brand">
+          <span class="footer-seal">玄</span>
+          <p>玄一</p>
+          <span class="footer-brand__en">DAOIST YOUTH · ORIENTAL AESTHETICS</span>
+        </div>
+        <p class="footer-poem">萬物負陰而抱陽，<br>沖氣以為和。</p>
+        <nav class="footer-nav" aria-label="頁尾導覽">
+          <a href="#dao">道系</a>
+          <a href="#yinyang">陰陽</a>
+          <a href="#sixiang">四象</a>
+          <a href="#bagua">八卦</a>
+          <a href="#guandao">觀道</a>
+        </nav>
+      </div>
+
+      <div class="footer-base">
+        <span>© 2026 玄一 XUAN YI</span>
+        <span>道法自然 · 允許一切發生</span>
+        <span>道系青年手冊 · VOL.01</span>
+      </div>
+    </div>
+    <div class="footer-giant" aria-hidden="true">太極</div>
+  </footer>
+</body>
+</html>
