@@ -2,9 +2,9 @@
 
 中国古风黑白太极主题单页，正在修一种很新的仙。以宣纸、墨色与朱砂为视觉骨架，把道教文化翻译成当代年轻人的生活语气：不内耗、松弛感、人间清醒，以及一颗会呼吸的太极。
 
-**在线体验：** https://2211825733p-debug.github.io/xuan-yi-taiji/
+**在线体验：** https://opes32.github.io/xuan-yi-taiji/
 
-**GitHub 仓库：** https://github.com/2211825733p-debug/xuan-yi-taiji
+**GitHub 仓库：** https://github.com/OPES32/xuan-yi-taiji
 
 ![桌面端卷首预览](preview/desktop.png)
 
